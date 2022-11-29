@@ -95,7 +95,7 @@ public class D_graph {
 			while(!(node1.equals(string))) {				
 				if(d_track.get(node1)==null){  // if it come null, he also cannot reach leyla
 					result="-1";
-					project3main.ismarried=false;
+					pathFinder.ismarried=false;
 					return result;
 				}
 				
@@ -104,14 +104,14 @@ public class D_graph {
 				node1=node2;				
 			}
 			
-			if(project3main.fathertimelimit >=spendingtime) {
-				project3main.ismarried=true;
+			if(pathFinder.fathertimelimit >=spendingtime) {
+				pathFinder.ismarried=true;
 			}else {
-				project3main.ismarried=false;
+				pathFinder.ismarried=false;
 			}			
 		}else {
 			result="-1";
-			project3main.ismarried=false; // if it cant reach leyla also cant marry with her
+			pathFinder.ismarried=false; // if it cant reach leyla also cant marry with her
 		}
 
 		return result;
